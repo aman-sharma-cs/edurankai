@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Student Management System</h1>
+    <p>Manage student enrollments in one place</p>
+</header>
+
+<main>
+    <!-- Dashboard -->
+    <section class="dashboard">
+        <div class="card">
+            <h3>Total Students</h3>
+            <p id="totalStudents">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Active Students</h3>
+            <p id="activeStudents">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Inactive Students</h3>
+            <p id="inactiveStudents">0</p>
+        </div>
+    </section>
+
+    <!-- Add Student -->
+    <section class="form-section">
+        <h2 id="formTitle">Add New Student</h2>
+
+        <form id="studentForm">
+            <input type="text" id="fullName" placeholder="Full Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="text" id="phoneNumber" placeholder="Phone Number" required>
+            <input type="text" id="course" placeholder="Course" required>
+            <input type="date" id="enrollmentDate" required>
+
+            <select id="status" required>
+                <option value="ACTIVE">Active</option>
+                <option value="INACTIVE">Inactive</option>
+            </select>
+
+            <button type="submit" id="submitButton">Add Student</button>
+            <button type="button" id="cancelButton" hidden>Cancel Edit</button>
+        </form>
+    </section>
+
+    <!-- Student List -->
+    <section class="students-section">
+        <h2>Students</h2>
+
+        <div class="filters">
+            <input type="text" id="search" placeholder="Search by name or email">
+
+            <input type="text" id="courseFilter" placeholder="Filter by course">
+
+            <select id="statusFilter">
+                <option value="">All Statuses</option>
+                <option value="ACTIVE">Active</option>
+                <option value="INACTIVE">Inactive</option>
+            </select>
+        </div>
+
+        <p id="message"></p>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Course</th>
+                    <th>Enrollment Date</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody id="studentTableBody">
+                <!-- Students will be loaded here using JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
