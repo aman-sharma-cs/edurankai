@@ -52,6 +52,12 @@ git clone https://github.com/aman-sharma-cs/edurankai.git
 ```sql
 CREATE DATABASE edurankai_db;
 ```
+### Database Initialization
+
+- Create the `edurankai_db` database in PostgreSQL.
+- Configure the `DB_PASSWORD` environment variable.
+- On application startup, Hibernate automatically creates or updates the required database tables using the JPA entities.
+- Student records are stored in the `students` table.
 
 ### 3. Configure database credentials
 
