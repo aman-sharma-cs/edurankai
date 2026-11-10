@@ -96,6 +96,20 @@ Tests cover successful creation, invalid email, duplicate email, and successful 
 - API documentation: `docs/api-documentation.md`
 - Development learnings: `LEARNINGS.md`
 - Project report: `PROJECT_REPORT.md`
+- 
+- ## Known Limitations
+
+- Pagination and sorting are not currently implemented.
+- Search and filtering are performed in application memory after retrieving non-deleted student records.
+- The application currently manages student records using a single database table.
+- Authentication and role-based access control are outside the current project scope.
+
+## Future Improvements
+
+- Implement pagination and sorting for larger datasets.
+- Optimize search and filtering at the database level.
+- Add authentication and role-based access control.
+- Improve frontend loading and user feedback.
 
 ## Author
 
